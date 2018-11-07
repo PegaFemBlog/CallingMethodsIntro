@@ -11,12 +11,24 @@ package com.mycompany.objectinstantiation;
  */
 public class App {
     
+    
+    //All of our "MAINS" must be static
+    //constants should also be static since it will never change
     public static void main(String[] args) {
+        //Static method means you have to go in order..
+        //will have to run line 16 before you can run line 18
         
-        Adder myAdder = new Adder();
+        //instantiation - if I don't instantiate this, 
+        //then I can't call it in the method
+        //(Cancel this instatiation) --> Adder myAdder = new Adder();
         
-        int sum = myAdder.add(5, 4);
+        double myPi = Adder.PI;
+        
+        int sum = Adder.add(5, 4);
+        
+        System.out.println(myPi);
         
         System.out.println("The sum is: "+ sum); 
+        
     }
 }
